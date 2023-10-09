@@ -79,8 +79,7 @@ elasticsearch.hosts: ['http://10.100.104.107:9200']
 #elasticsearch.shardTimeout: 30000
 
 # Logs queries sent to Elasticsearch. Requires logging.verbose set to true.
-#elasticsearch.logQueries: false
-
+elasticsearch.logQueries: true
 # Specifies the path where Kibana creates the process ID file.
 #pid.file: /var/run/kibana.pid
 
