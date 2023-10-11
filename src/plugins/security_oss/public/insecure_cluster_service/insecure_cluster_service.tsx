@@ -88,7 +88,7 @@ export class InsecureClusterService {
     const shouldInitialize =
       this.enabled && !core.http.anonymousPaths.isAnonymous(window.location.pathname);
 
-    // TODO: Commented out to remove ALERT messages
+    // TODO: Commented out to remove Alerts globally
     // if (shouldInitialize) {
     //   this.initializeAlert(core);
     // }

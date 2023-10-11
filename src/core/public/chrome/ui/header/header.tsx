@@ -99,8 +99,9 @@ export function Header({
 
   return (
     <>
-      // TODO: Commented out to remove Header globally
-      {/* <header className={className} data-test-subj="headerGlobalNav">
+      {/* 
+       // TODO: Commented out to remove Header globally
+      <header className={className} data-test-subj="headerGlobalNav">
         <div id="globalHeaderBars">
           <EuiHeader
             theme="dark"
