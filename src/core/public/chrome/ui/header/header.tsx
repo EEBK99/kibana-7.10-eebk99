@@ -99,7 +99,7 @@ export function Header({
 
   return (
     <>
-      <header className={className} data-test-subj="headerGlobalNav">
+      {/* <header className={className} data-test-subj="headerGlobalNav">
         <div id="globalHeaderBars">
           <EuiHeader
             theme="dark"
@@ -201,7 +201,7 @@ export function Header({
           }}
           customNavLink$={observables.customNavLink$}
         />
-      </header>
+      </header> */}
     </>
   );
 }
