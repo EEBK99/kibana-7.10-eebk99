@@ -108,7 +108,7 @@ export const Template: FunctionComponent<Props> = ({
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width" />
-        <title>Elastic</title>
+        <title>Link Analysis</title>
         <Fonts url={uiPublicUrl} />
         {/* Favicons (generated from http://realfavicongenerator.net/) */}
         <link
@@ -151,7 +151,7 @@ export const Template: FunctionComponent<Props> = ({
         <div
           className="kbnWelcomeView"
           id="kbn_loading_message"
-          style={{ display: 'none' }}
+          style={{ display: 'none', background: '#0C1D28' }}
           data-test-subj="kbnLoadingMessage"
         >
           <div className="kbnLoaderWrap">
@@ -163,7 +163,7 @@ export const Template: FunctionComponent<Props> = ({
                   'Elastic did not load properly. Check the server output for more information.',
               })}
             >
-              {i18n('core.ui.welcomeMessage', { defaultMessage: 'Loading Linked Analysis' })}
+              {i18n('core.ui.welcomeMessage', { defaultMessage: 'Loading Link Analysis' })}
             </div>
             <div className="kbnProgress" />
           </div>
