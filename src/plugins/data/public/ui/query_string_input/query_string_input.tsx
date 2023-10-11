@@ -683,11 +683,12 @@ export default class QueryStringInputUI extends Component<Props, State> {
           </div>
         </EuiOutsideClickDetector>
 
-        <QueryLanguageSwitcher
+        {/* TODO: Commented out to remove KGL globally */}
+        {/* <QueryLanguageSwitcher
           language={this.props.query.language}
           anchorPosition={this.props.languageSwitcherPopoverAnchorPosition}
           onSelectLanguage={this.onSelectLanguage}
-        />
+        /> */}
       </div>
     );
   }

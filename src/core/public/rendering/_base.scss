@@ -6,9 +6,12 @@
  * by core service from new platform
  */
 // SASSTODO: Naming here is too embedded and high up that changing them could cause major breaks
+
+// TODO: background color added
 #kibana-body {
   overflow-x: hidden;
   min-height: 100%;
+  background: #0B1B25;
 }
 
 .app-wrapper {
@@ -29,7 +32,7 @@
   flex-basis: auto;
   flex-direction: column;
 
-  > * {
+  >* {
     flex-shrink: 0;
   }
 }
