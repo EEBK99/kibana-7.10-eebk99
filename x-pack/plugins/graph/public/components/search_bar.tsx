@@ -74,7 +74,11 @@ export function SearchBarComponent(props: SearchBarProps) {
     indexPatternProvider,
     confirmWipeWorkspace,
   } = props;
-  const [query, setQuery] = useState<Query>({ language: 'kuery', query: initialQuery || '' });
+
+  const [query, setQuery] = useState<Query>({
+    language: 'kuery',
+    query: initialQuery || `target_information.case_id : ${window.location.href.split('=')[1]}`,
+  });
   const [currentIndexPattern, setCurrentIndexPattern] = useState<IndexPattern | undefined>(
     undefined
   );
@@ -90,6 +94,21 @@ export function SearchBarComponent(props: SearchBarProps) {
     fetchPattern();
   }, [currentDatasource, indexPatternProvider]);
 
+  useEffect(() => {
+    const handleClick = () => {
+      const button = document.querySelector(
+        '[data-test-subj="graph-explore-button"]'
+      ) as HTMLButtonElement;
+
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          button?.click();
+        }, 1000);
+      }
+    };
+    handleClick();
+  }, []);
+
   const kibana = useKibana<IDataPluginServices>();
   const { services, overlays } = kibana;
   const { savedObjects, uiSettings } = services;
@@ -104,7 +123,7 @@ export function SearchBarComponent(props: SearchBarProps) {
         }
       }}
     >
-      <EuiFlexGroup gutterSize="m">
+      <EuiFlexGroup gutterSize="m" style={{ visibility: 'hidden' }}>
         <EuiFlexItem>
           <QueryStringInput
             disableAutoFocus
