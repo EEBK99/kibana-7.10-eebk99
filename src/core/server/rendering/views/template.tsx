@@ -151,7 +151,7 @@ export const Template: FunctionComponent<Props> = ({
         <div
           className="kbnWelcomeView"
           id="kbn_loading_message"
-          style={{ display: 'none', background: '#0C1D28' }}
+          style={{ display: 'none', background: '#021018' }}
           data-test-subj="kbnLoadingMessage"
         >
           <div className="kbnLoaderWrap">
