@@ -41,7 +41,7 @@ import { QuerySuggestion, QuerySuggestionTypes } from '../../autocomplete';
 
 import { KibanaReactContextValue, toMountPoint } from '../../../../kibana_react/public';
 import { fetchIndexPatterns } from './fetch_index_patterns';
-import { QueryLanguageSwitcher } from './language_switcher';
+// import { QueryLanguageSwitcher } from './language_switcher';
 import { PersistedLog, getQueryLog, matchPairs, toUser, fromUser } from '../../query';
 import { SuggestionsListSize } from '../typeahead/suggestions_component';
 import { SuggestionsComponent } from '..';
@@ -178,7 +178,7 @@ export default class QueryStringInputUI extends Component<Props, State> {
         })) || [];
 
       return [...suggestions, ...recentSearchSuggestions];
-    } catch (e) {
+    } catch (e: any) {
       // TODO: Waiting on https://github.com/elastic/kibana/issues/51406 for a properly typed error
       // Ignore aborted requests
       if (e.message === 'The user aborted a request.') return;
